@@ -11,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
 public class WelcomeRestController {
     @Autowired
     private GreetFeignClient greetFeignClient;
+
     @GetMapping("/welcome")
     public String getWelcomeMsg() {
        /*
@@ -20,8 +21,8 @@ public class WelcomeRestController {
         String greetResp = forEntity.getBody();
         return  greetResp+ " Welcome to the Raj Universe";
         */
-
         String greetResp = greetFeignClient.invokeGreetApi();
         return greetResp+ ", Welcome to the Raj Universe";
+
     }
 }
