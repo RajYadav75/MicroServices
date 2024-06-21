@@ -11,6 +11,6 @@ public class GreetRestController {
     @GetMapping("/greet")
     public String getGreetMsg(){
         String port = env.getProperty("server.port");
-        return "Good Eveninig (" + port + ") ";
+        return "Good Evening (" + port + ") ";
     }
 }
