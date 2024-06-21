@@ -23,4 +23,5 @@ public class MyFilter implements GlobalFilter {
         }
         return chain.filter(exchange);
     }
+
 }
